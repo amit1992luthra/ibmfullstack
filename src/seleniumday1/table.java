@@ -7,28 +7,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class findelementsvsfindelement {
+public class table {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", ".//lib//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();  //open my browser
-		driver.get("https://demo.guru99.com/test/newtours/register.php");
-		List<WebElement> obj = driver.findElements(By.tagName("option"));
-		
-		System.out.println(obj.size());
+		driver.get("https://www.nseindia.com/market-data/top-gainers-loosers?cat=G");
+		Thread.sleep(4000);
+		List<WebElement> obj = driver.findElements(By.xpath("//table[@id='topgainer-Table']/tbody/tr/td[1]"));
 		
 		for(int i=0;i<obj.size();i++)
 		{
 			WebElement value = obj.get(i);
 			System.out.println(value.getText());
-			
-			if(value.getText().equals("INDIA"))
-			{
-				value.click();
-				break;
-			}
-			
 		}
+
 	}
 
 }
