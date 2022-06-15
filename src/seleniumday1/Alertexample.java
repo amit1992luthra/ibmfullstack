@@ -28,6 +28,8 @@ public class Alertexample {
 		obj.dismiss();
 		System.out.println(value);
 		
+		driver.quit();
+		
 		
 		
 		
