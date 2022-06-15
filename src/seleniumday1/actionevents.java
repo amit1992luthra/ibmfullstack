@@ -40,8 +40,8 @@ public class actionevents {
         
        // obj.clickAndHold(elem).moveToElement(objfordrop).release().build().perform();
         
-        obj.dragAndDrop(elem, objfordrop).contextClick(objfordrop).build().perform();
-        
+        obj.dragAndDrop(elem, objfordrop).build().perform();
+        driver.switchTo().defaultContent();  // will again switch back to parent body from frame
         
         
 
