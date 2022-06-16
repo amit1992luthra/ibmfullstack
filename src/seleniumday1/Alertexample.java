@@ -14,6 +14,8 @@ public class Alertexample {
 		driver.get("https://demo.guru99.com/test/delete_customer.php");
 		driver.manage().window().maximize();
 		
+		
+		
 		driver.findElement(By.name("cusid")).sendKeys("123");
 		
 		driver.findElement(By.name("submit")).click();

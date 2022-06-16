@@ -45,10 +45,7 @@ public class gettext {
 		{
 			System.out.println("fail");
 		}
-		
 	
-		
-		
 		
 		
 

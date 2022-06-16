@@ -26,9 +26,9 @@ public class javascriptexample {
 		
 		js.executeScript("arguments[0].value='hello world';arguments[1].value='password';",username,password);
 
-		//js.executeScript("alert('hello ibm');");
+		js.executeScript("alert('hello ibm');");
 		
-		 js.executeScript("window.scrollBy(0,1000);");
+		 js.executeScript("window.scrollBy(0,1000)");
 
 
 		

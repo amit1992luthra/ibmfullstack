@@ -1,5 +1,7 @@
 package seleniumday1;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,6 +39,21 @@ public class dropdown {
 		Thread.sleep(2000);
 		obj.deselectByVisibleText("Apple");
 		
+		
+		String id = driver.getWindowHandle();
+		System.out.println(id);
+		
+		Set<String> obj1 = driver.getWindowHandles();
+		
+		
+		for(String ids : obj1)
+		{
+			driver.switchTo().window(ids);
+			System.out.println(driver.getTitle());
+		}
+		
+			
+			
 	}
 
 }
